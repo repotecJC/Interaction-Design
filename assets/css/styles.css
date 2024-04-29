@@ -1,0 +1,50 @@
+.Guide-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--bs-body-bg);
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  opacity: 85%;
+  height: 50px;
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.Select_area {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  background-color: var(--bs-body-bg);
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: top 0.3s ease;
+  opacity: 85%;
+  height: 50px;
+}
+
+#UWE-Find-Your-Route {
+  position: fixed;
+  top: 20px;
+  left: 550px;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: top 0.3s ease;
+  opacity: 85%;
+  height: 50px;
+}
+
