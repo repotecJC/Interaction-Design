@@ -1,31 +1,31 @@
-// 開合動畫
+// animation
 var GuideContainer = document.getElementById('Guide-container');
 var Select_area = document.getElementById('Select_area');
-// 初始時列表是收合的
+// close in the first place
 var isExpanded = false;
 
-// 監聽列表容器的點擊事件
+// click event
 GuideContainer.addEventListener('click', function() {
-    // 如果列表是展開的，則收合；如果是收合的，則展開
+    // expanded if
     if (isExpanded) {
-        GuideContainer.style.height = '50px'; // 30px 是收合後的高度
+        GuideContainer.style.height = '50px'; // 30px when list closed
         Select_area.style.top = parseInt(GuideContainer.style.height) + 30 +'px';
     } else {
-        // 通過計算列表內容的高度來展開列表
+        // expand the list regarding to the content
         GuideContainer.style.height = GuideContainer.scrollHeight + 'px';
         Select_area.style.top = parseInt(GuideContainer.style.height) + 30 +'px';
     }
-    // 更新展開狀態
+    // update expanded
     isExpanded = !isExpanded;
 });
 
 
-// 選單設定
+// list setting
 var select_value = document.getElementById('Select');
 
-// 監聽下拉選單的變化
+// check the change
 select_value.addEventListener('change', function() {
-    // 獲取所選擇的值
+    // get user click value
     var selectedValue = select_value.value;
 
     var link_list = {
@@ -53,9 +53,9 @@ select_value.addEventListener('change', function() {
         R : 'https://maps.app.goo.gl/X2Ah76BjjxZFcESA9'
     };
     
-    // 檢查所選值是否在對應關係物件中
+    // check the value in list
     if (selectedValue in link_list) {
-        // 如果是，則開啟對應的網頁
+        // open the google maps
         window.location.href = link_list[selectedValue];
     }
 });
